@@ -25,10 +25,34 @@ void ShowArray(string[] array)
     Console.WriteLine();
 }
 
+string[] ThreeSymbolArray(string[] array)
+{
+    int a = 0;
+    int b = 0;
 
+    for (int i = 0; i < array.Length; i += 1)
+    {
+        if (array[i].Length <= 3) a += 1;
+    }
+
+    string[] arrayResult = new string[a];
+    for (int i = 0; i < array.Length; i += 1)
+     {
+        if (array[i].Length <= 3)
+        {
+            arrayResult[b] = array[i];
+            b += 1;
+        }
+    }
+    return arrayResult;
+}
 
 
 string[] myArray = CreateArray();
 Console.WriteLine();
 Console.WriteLine("Созданный массив:");
 ShowArray(myArray);
+Console.WriteLine();
+string[] finalArray = ThreeSymbolArray(myArray);
+Console.WriteLine("Итоговый массив:");
+ShowArray(finalArray);
