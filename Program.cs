@@ -6,7 +6,7 @@
 // [“Russia”, “Denmark”, “Kazan”] → []
 
 
-string[] CreateArray()
+string[] CreateArray()  // Метод создания массива
 {
     Console.Write("Введите размер массива: ");
     int size = Convert.ToInt32(Console.ReadLine());
@@ -18,14 +18,14 @@ string[] CreateArray()
     }
     return array;
 }
-void ShowArray(string[] array)
+void ShowArray(string[] array)  //Метод вызова массива
 {
     for (int i = 0; i < array.Length; i += 1)
         Console.Write(array[i] + " ");
     Console.WriteLine();
 }
 
-string[] ThreeSymbolArray(string[] array)
+string[] ThreeSymbolArray(string[] array) //Метод создания нового массива на основе входящего. Все элементы нового массива содержат на более 3 символов
 {
     int a = 0;
     int b = 0;
